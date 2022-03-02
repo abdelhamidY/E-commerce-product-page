@@ -1,0 +1,126 @@
+@import "../style/_variables";
+.details {
+  margin-top: 30px;
+  .title {
+    color: $primary_orange;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 15px;
+  }
+  h1 {
+    margin-top: 0px;
+    font-size: 44px;
+    letter-spacing: 1px;
+    font-weight: 900;
+  }
+  .sub-heading {
+    color: $dark_blue;
+    line-height: 24px;
+    margin-top: -10px;
+  }
+  .price-section {
+    display: flex;
+    align-items: center;
+    margin-top: -17px;
+    .after-discount-mobile {
+      display: none;
+    }
+    .price {
+      display: inline-block;
+      margin-right: 1rem;
+    }
+    .discount {
+      display: inline-block;
+      color: $primary_orange;
+      background-color: $secondery_orange;
+      padding: 0 7px;
+      font-weight: bold;
+      font-size: 15px;
+      height: 20px;
+      border-radius: 5px;
+    }
+  }
+  .after-discount {
+    color: $dark_blue;
+    margin-top: -10px;
+    font-size: 14px;
+  }
+  .buy-snicker {
+    display: flex;
+    align-items: baseline;
+    gap: 20px;
+    .cart-details {
+      display: flex;
+      justify-content: space-between;
+      background-color: $light_blue;
+      width: 100px;
+      height: 40px;
+      align-items: center;
+      padding: 0 10px;
+      border-radius: 9px;
+      margin-top: 25px;
+      p {
+        font-weight: bold;
+      }
+      img {
+        cursor: pointer;
+        &:hover {
+          opacity: 0.5;
+        }
+      }
+      .minus {
+        height: 5px;
+      }
+      .plus {
+        height: 11px;
+      }
+    }
+    button {
+      outline: none;
+      background-color: $primary_orange;
+      border: none;
+      padding: 12px 60px;
+      color: white;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 12px;
+      cursor: pointer;
+      box-shadow: 0px 17px 5px 0px rgba(255, 237, 224, 0.75);
+      //   &:hover {
+      //     opacity: 0.5;
+      //   }
+      &:active {
+        opacity: 0.5;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .details {
+    margin-left: 2rem;
+    .after-discount-mobile {
+      display: block !important;
+      margin-left: 11rem;
+    }
+    .after-discount {
+      display: none;
+    }
+    h1 {
+      font-size: 28px;
+    }
+    .sub-heading {
+      width: 91%;
+      font-size: 18px;
+    }
+    .buy-snicker {
+      flex-direction: column;
+      .cart-details {
+        width: 80%;
+      }
+      .btn {
+        width: 85%;
+      }
+    }
+  }
+}

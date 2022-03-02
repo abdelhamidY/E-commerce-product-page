@@ -1,0 +1,133 @@
+@import "../style/variables";
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 6rem;
+  margin-bottom: 0.5rem;
+  h1 {
+    font-weight: bold;
+  }
+  .left {
+    display: flex;
+    align-items: baseline;
+    gap: 30px;
+    .menu {
+      display: none;
+    }
+  }
+  ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    color: $dark_blue;
+  }
+  .right {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    position: relative;
+    span {
+      position: absolute;
+      top: 18px;
+      left: 7px;
+      background-color: $primary_orange;
+      color: white;
+      font-size: 10px;
+      display: inline-block;
+      padding: 1px 5px;
+      border-radius: 50%;
+      font-weight: bold;
+    }
+    .cart {
+      width: 20px;
+      height: 20px;
+      cursor: pointer;
+    }
+    img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+hr {
+  width: 1152px;
+  //   border: 1px solid #ffffff52;
+  border-color: #ffffff52;
+}
+
+.main-cart {
+  position: absolute;
+  right: 65px;
+  top: 65px;
+  width: 320px;
+  height: 220px;
+  background-color: white;
+  box-shadow: 0px 21px 38px -1px rgb(140 140 140 / 20%);
+  border-radius: 12px;
+  h4 {
+    margin-left: 15px;
+    font-size: 14px;
+  }
+  hr {
+    width: 297px;
+  }
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 57%;
+    flex-direction: column;
+    padding: 0px 15px;
+    .top {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      .cart-details {
+        color: #959595;
+      }
+      span {
+        color: black;
+      }
+      img {
+        width: 50px;
+        height: 50px;
+        border-radius: 5px;
+      }
+      .delete-image {
+        width: 13px;
+        height: 16px;
+        margin-left: 12px;
+      }
+    }
+    .bottom {
+      width: 100%;
+      button {
+        width: 100%;
+        background-color: $primary_orange;
+        border: none;
+        outline: none;
+        color: white;
+        font-weight: 700;
+        border-radius: 10px;
+        padding: 15px 0px;
+      }
+    }
+  }
+}
+
+.hidden {
+  opacity: 0;
+}
+
+@media (max-width: 600px) {
+  ul {
+    display: none !important;
+  }
+  .menu {
+    display: block !important;
+  }
+  nav {
+    padding: 0px 2rem;
+    justify-content: space-between;
+  }
+}
